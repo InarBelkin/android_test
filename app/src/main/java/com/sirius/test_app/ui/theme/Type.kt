@@ -19,7 +19,6 @@ val Typography = Typography(
         fontWeight = FontWeight.Normal,
         lineHeight = 26.sp,
         fontSize = 12.sp,
-        color = Grey,
         letterSpacing = 0.5.sp
     ),
     body2 = TextStyle(
@@ -50,5 +49,11 @@ val Typography = Typography(
         letterSpacing = 0.5.sp,
         color = White
     ),
+    button = TextStyle(
+        fontFamily = SkModernist,
+        fontWeight = FontWeight(700),
+        fontSize = 20.sp,
+        letterSpacing = 0.6.sp
+    )
 )
 

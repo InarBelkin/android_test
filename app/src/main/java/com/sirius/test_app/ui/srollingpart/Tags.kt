@@ -14,7 +14,7 @@ import com.sirius.test_app.ui.theme.ExtendedTheme
 
 @Composable
 fun Tags(tags: List<String>) {
-    Row {
+    Row(modifier = Modifier.padding(vertical = 16.dp)) {
         for (tag in tags) {
             TagItem(tag)
         }

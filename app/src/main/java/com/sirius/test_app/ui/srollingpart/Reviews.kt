@@ -1,8 +1,6 @@
 package com.sirius.test_app.ui
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -26,7 +24,12 @@ fun Reviews(reviews: List<ReviewModel>) {
 @Composable
 fun ReviewItem(review: ReviewModel) {
     Column {
-        Row(verticalAlignment = Alignment.CenterVertically) {
+        Row(
+            modifier = Modifier
+                .padding(8.dp)
+                .height(40.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             AsyncImage(
                 modifier = Modifier
                     .size(36.dp)
@@ -35,12 +38,19 @@ fun ReviewItem(review: ReviewModel) {
                 model = review.userImage,
                 contentDescription = null,
             )
-            Column {
+            Column(
+                modifier = Modifier.fillMaxHeight(),
+                verticalArrangement = Arrangement.SpaceBetween
+            ) {
                 Text(review.userName, style = MaterialTheme.typography.h3)
                 Text(review.date)
             }
         }
-        Text(text = review.message, lineHeight = 20.sp)
+        Text(
+            modifier = Modifier.padding(top = 8.dp, bottom = 4.dp),
+            text = review.message,
+            lineHeight = 20.sp
+        )
     }
 
 

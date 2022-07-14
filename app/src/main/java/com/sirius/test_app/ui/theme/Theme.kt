@@ -11,11 +11,11 @@ import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
     primary = gold,
-    onPrimary = Color.Green,
+    onPrimary = Color.Black,
     background = blackBlue,
-    onBackground = White,
+    onBackground = Grey,
     surface = blackBlue,
-    onSurface = White,
+    onSurface = Grey,
     primaryVariant = gold,
     secondary = darkBlue,
     onSecondary = lightBlue,
@@ -64,7 +64,8 @@ fun AndroidTestTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Compo
         frame = darkGrey,
         tagBackground = darkBlue,
         tagForeground = lightBlue,
-    )
+
+        )
 
     val colors = if (darkTheme) {
         DarkColorPalette
