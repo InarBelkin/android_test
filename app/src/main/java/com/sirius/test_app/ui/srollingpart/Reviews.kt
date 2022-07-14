@@ -39,11 +39,13 @@ fun ReviewItem(review: ReviewModel) {
                 contentDescription = null,
             )
             Column(
-                modifier = Modifier.fillMaxHeight(),
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .padding(horizontal = 16.dp),
                 verticalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(review.userName, style = MaterialTheme.typography.h3)
-                Text(review.date)
+                Text(review.date, style = MaterialTheme.typography.body2)
             }
         }
         Text(

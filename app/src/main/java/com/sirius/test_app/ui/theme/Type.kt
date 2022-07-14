@@ -25,7 +25,7 @@ val Typography = Typography(
         fontFamily = SkModernist,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
-        color = darkerGrey
+        color = darkGrey
     ),
     h1 = TextStyle(
         fontFamily = SkModernist,

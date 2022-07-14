@@ -39,15 +39,22 @@ private val LightColorPalette = lightColors(
 
 data class ExtendedColors(
     val frame: Color,
+    val info: Color,
     val tagBackground: Color,
-    val tagForeground: Color
+    val tagForeground: Color,
+    val topNavigationBackground: Color,
+    val topNavigationForeground: Color
 )
 
 val LocalExtendedColors = staticCompositionLocalOf {
     ExtendedColors(
         frame = Color.Unspecified,
+        info = Color.Unspecified,
         tagBackground = Color.Unspecified,
         tagForeground = Color.Unspecified,
+        topNavigationBackground = Color.Unspecified,
+        topNavigationForeground = Color.Unspecified
+
     )
 }
 
@@ -62,10 +69,12 @@ object ExtendedTheme {
 fun AndroidTestTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val extendedColors = ExtendedColors(
         frame = darkGrey,
+        info = darkGrey,
         tagBackground = darkBlue,
         tagForeground = lightBlue,
-
-        )
+        topNavigationBackground = TransparentWhite,
+        topNavigationForeground = White
+    )
 
     val colors = if (darkTheme) {
         DarkColorPalette
